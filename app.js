@@ -23,4 +23,4 @@ bot.on('ready', () => {
     console.log('/// MADE BY ZeSp ///')
 });
 
-bot.login('NDYyNDA3NTgyMjg0NTEzMjgw.DhlAoA.vImb0vtUEWajyntqriCzBWOsSRQ'); // put your token here, this can be found if you do CTRL + SHIFT + I in discord, then going to APPLICATION -> LOCAL STORAGE -> https://discordapp.com -> token (at the bottom)
+bot.login('TOKEN HERE'); // put your token here, this can be found if you do CTRL + SHIFT + I in discord, then going to APPLICATION -> LOCAL STORAGE -> https://discordapp.com -> token (at the bottom)
