@@ -1,0 +1,22 @@
+{
+  "name": "discord_changer",
+  "version": "1.0.0",
+  "description": "Auto changes discord playing message",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeSpB/Custom-Discord-Messages.git"
+  },
+  "author": "ZeSp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZeSpB/Custom-Discord-Messages/issues"
+  },
+  "homepage": "https://github.com/ZeSpB/Custom-Discord-Messages#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
