@@ -23,4 +23,6 @@ bot.on('ready', () => {
     console.log('/// MADE BY ZeSp ///')
 });
 
+bot.on('reconnecting', () => console.log('Reconnecting to DiscordAPI')); //reconnect to the Discord API if the bot disconnects for whatever reason
+
 bot.login('TOKEN HERE'); // put your token here, this can be found if you do CTRL + SHIFT + I in discord, then going to APPLICATION -> LOCAL STORAGE -> https://discordapp.com -> token (at the bottom)
