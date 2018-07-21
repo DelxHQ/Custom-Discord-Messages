@@ -1,28 +1,26 @@
+const { TOKEN, TYPE, URL } = require ('./config');
+const messages = require('./messages.json')
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on('ready', () => {
 
     setInterval(function () {
-        let messages = [
-            'MESSAGE 1',
-            'MESSAGE 2',
-            'MESSAGE 3'
-        ];
-
+        const randMsg = Math.floor(Math.random() * messages.Messages.length);
         bot.user.setPresence({
             game: {
-                name: messages[Math.floor(Math.random() * messages.length)],
-                type: 'PLAYING' // this can be changed between PLAYING, STREAMING, LISTENING or WATCHING
+                name: messages[randMsg],
+                url: URL, 
+                type: TYPE
             }
         });
     }, 20 * 1000); // 20 seconds is the minimum you can go
 
     console.log('Bot started.');
-    console.log('Signed in as ' + bot.user.username);
-    console.log('/// MADE BY ZeSp ///')
+    console.log('You have been signed in as ' + bot.user.username);
+    console.log('This was made by ZeSp');
 });
 
-bot.on('reconnecting', () => console.log('Reconnecting to DiscordAPI')); //reconnect to the Discord API if the bot disconnects for whatever reason
+bot.on('reconnecting', () => console.log('Reconnecting to DiscordAPI'));
 
-bot.login('TOKEN HERE'); // put your token here, this can be found if you do CTRL + SHIFT + I in discord, then going to APPLICATION -> LOCAL STORAGE -> https://discordapp.com -> token (at the bottom)
+bot.login(TOKEN);
