@@ -1,26 +1,21 @@
-const { TOKEN, TYPE, URL } = require ('./config');
+const { TOKEN, TYPE } = require ('./config');
 const messages = require('./messages.json')
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on('ready', () => {
-
     setInterval(function () {
-        const randMsg = Math.floor(Math.random() * messages.Messages.length);
+        randMsg = messages.statuses[Math.floor(Math.random() * messages.statuses.length)];
         bot.user.setPresence({
             game: {
-                name: messages[randMsg],
-                url: URL, 
+                name: randMsg,
+                url: 'https://twitch.tv/Dogle601', 
                 type: TYPE
             }
         });
     }, 20 * 1000); // 20 seconds is the minimum you can go
-
-    console.log('Bot started.');
     console.log('You have been signed in as ' + bot.user.username);
-    console.log('This was made by ZeSp');
 });
 
-bot.on('reconnecting', () => console.log('Reconnecting to DiscordAPI'));
-
+bot.on('reconnecting', () => console.log('Reconnecting to Discord API'));
 bot.login(TOKEN);
